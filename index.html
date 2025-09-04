@@ -5,15 +5,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">    
+    <!--<script type="module" src="./js/app.js" defer></script>           Закомментил, т.к. иначе в консоли сыпется много ошибок-->    
+    <script type="module" src="./js/navBarScript.js" defer></script>
 
     <title>AIT Project</title>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <nav>
+            <div id="navBarLeft">
+                <a href="./">DevTeam</a>
+            </div>
+            <div id="navBarMenu">
+                <a href="#about" class="navBarSimple">О нас</a>
+                <a href="#ourTeam" class="navBarSimple">Наша команда</a>
+                <a href="#gallery" class="navBarSimple">Галерея</a>
+                <a href="#contacts" id="navBarBtnContact">Связаться</a>
+            </div>
+            <button id="navBarBtnMenu">☰</button>
+        </nav>
+    </header>
+
+<!--
+    <main>
+        <div id="about">
+            <h2>О нас</h2>
+        </div>
+        <div id="ourTeam">
+            <h2>Наша команда</h2>
+        </div>
+        <div id="gallery">
+            <h2>Галерея</h2>
+        </div>
+        <div id="contacts">
+            <h2>Связаться</h2>
+        </div>
+
+    </main>
+-->
+
+
     <footer></footer>
 </body>
 
