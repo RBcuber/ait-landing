@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">    
-    <!--<script type="module" src="./js/app.js" defer></script>           Закомментил, т.к. иначе в консоли сыпется много ошибок-->    
-    <script type="module" src="./js/navBarScript.js" defer></script>
-
-    <title>AIT Project</title>
+    <script type="module" src="./js/app.js" defer></script>
+    <title>landing our team</title>
 </head>
 
 <body>
@@ -19,35 +17,106 @@
                 <a href="./">DevTeam</a>
             </div>
             <div id="navBarMenu">
-                <a href="#about" class="navBarSimple">О нас</a>
-                <a href="#ourTeam" class="navBarSimple">Наша команда</a>
+                <a href="#about2" class="navBarSimple">О нас</a>
+                <a href="#team" class="navBarSimple">Наша команда</a>
                 <a href="#gallery" class="navBarSimple">Галерея</a>
-                <a href="#contacts" id="navBarBtnContact">Связаться</a>
+                <a href="#footer-container" id="navBarBtnContact">Связаться</a>
             </div>
             <button id="navBarBtnMenu">☰</button>
         </nav>
     </header>
-
-<!--
     <main>
-        <div id="about">
-            <h2>О нас</h2>
-        </div>
-        <div id="ourTeam">
+
+        <section id="about">
+            <h1 class="headLine">Создаём сайты быстрее и проще</h1>
+            <p class="subheadline">Лёгкий, понятный макет: О нас, Команда, Галерея, Контакты.</p>
+            <button class="btn">Посмотреть кейсы</button>
+        </section>
+        <section id="about2">
+            <h1 class="headLine">О нас</h1>
+            <p class="subheadline">Мы - небольшая команда. Делаем аккуратные интерфейсы: чистая типографика, аккуратные
+                отступы, понятные блоки.</p>
+        </section>
+
+        <section id="team">
             <h2>Наша команда</h2>
-        </div>
-        <div id="gallery">
+            <div class="team-container">
+                <div class="team-card">
+                    <img src="https://weeek.net/assets/thumbnails/blog/chto-delaet-teamlead-roli-obyazannosti-i-navyki-1230.png"
+                        alt="Фото участника">
+                    <h3>Ihor Kirichenko</h3>
+                    <p>Тимлид</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://doprof.ru/upload/medialibrary/a5a/programmist.jpg" alt="Фото участника">
+                    <h3>Wassili Krause</h3>
+                    <p>Header</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://doprof.ru/upload/medialibrary/a5a/programmist.jpg" alt="Фото участника">
+                    <h3>Alexej Luja</h3>
+                    <p>About</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://doprof.ru/upload/medialibrary/a5a/programmist.jpg" alt="Фото участника">
+                    <h3>Alex Alimow</h3>
+                    <p>Team</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://doprof.ru/upload/medialibrary/a5a/programmist.jpg" alt="Фото участника">
+                    <h3>Aider Dudakov</h3>
+                    <p>Gallery</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://doprof.ru/upload/medialibrary/a5a/programmist.jpg" alt="Фото участника">
+                    <h3>Dimitrij Sachs</h3>
+                    <p>Footer</p>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
             <h2>Галерея</h2>
-        </div>
-        <div id="contacts">
-            <h2>Связаться</h2>
-        </div>
-
+            <div class="gallery-container">
+                <div class="card">
+                    <img src="./images/teamwork.jpg" alt="Команда собирает пазл">
+                    <p>Командное взаимодействие</p>
+                </div>
+                <div class="card">
+                    <img src="./images/too.jpeg" alt="Команда обсуждает">
+                    <p>Обсуждение задач</p>
+                </div>
+                <div class="card">
+                    <img src="./images/Member5.jpg" alt="Команда — TEAM">
+                    <p>Мы — TEAM</p>
+                </div>
+                <div class="card">
+                    <img src="./images/Member4.png" alt="Командная работа">
+                    <p>Совместное решение</p>
+                </div>
+                <div class="card">
+                    <img src="./images/Member2.jpg" alt="member5">
+                    <p>Наша способность</p>
+                </div>
+                <div class="card">
+                    <img src="./images/Member6.png" alt="member6">
+                    <p>Наш рабочий кабинет</p>
+                </div>
+            </div>
+        </section>
     </main>
--->
-
-
-    <footer></footer>
+    <footer>
+        <div id="footer-container">
+            <div class="footer-column">
+                <h3>DevTeam</h3>
+                <p>© 2025 DevTeam</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Контакты:</strong></p>
+                <p>hello@devteam.example</p>
+                <p>+49 160 000000</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
