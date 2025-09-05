@@ -389,7 +389,6 @@ footer {
   }
   .footer-column{
     width: 200px;
-    margin: 0 auto;
     padding-left: 50px;
   }
   .footer-column:first-child{
