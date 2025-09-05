@@ -1,18 +1,7 @@
 footer{
-   position: absolute;
-left: 0%;
-right: 0%;
-top: 75.4%;
-bottom: 16.6%;
-margin: 10px;
-padding: 5px;
-}
-.footer-container h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-.footer-container{
-    margin: 5px 0;
-    color: #555;
+  position: static; /* по умолчанию */
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 20px;
+  background: #f5f5f5;
 }
