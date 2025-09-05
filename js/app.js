@@ -29,4 +29,4 @@ document.addEventListener("click", (e) => {
     if (!navBarBtnMenu.contains(e.target) && phone) {
         navBarMenu.style.setProperty("display", "none");
     }
-})
+})ы
