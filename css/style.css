@@ -1,3 +1,78 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.gallery {
+  padding: 30px;
+  text-align: start;
+  background: #fff;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 20px;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  height: 280px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1300px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr; /* одна колонка */
+    justify-items: center; /* все элементы внутри по центру */
+    gap: 20px;
+  }
+  .card {
+    max-width: 400px;
+    width: 100%; /* чтобы не растягивалась больше контейнера */
+  }
+}
+
 #team {
   padding: 40px 20px;
   text-align: center;
@@ -149,12 +224,58 @@ footer {
 
 @media (max-width: 600px) {
   .team-container {
-    grid-template-columns: 1fr;
-    /* по 1 карточке */
+    display: grid;
+    grid-template-columns: 1fr; /* одна колонка */
+    justify-items: center; /* все элементы внутри по центру */
+    gap: 20px;
   }
   .footer-container {
     grid-template-columns: 1fr; /* в 1 колонку на мобилках */
     gap: 20px;
     text-align: left;
   }
+}
+
+.headLine {
+  font-style: italic;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.subheadline {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: rgb(172, 139, 228);
+  background: linear-gradient(120deg, rgb(111, 21, 208), #e3d5e5);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid violet;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2d0e27, #a1399d);
+  color: #fff;
+}
+
+.about2 {
+  background-color: rgb(244, 237, 237);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+
+  width: 90vw;
+  height: auto;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 20px;
 }
