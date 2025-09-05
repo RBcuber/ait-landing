@@ -1,130 +1,151 @@
 /*Часть Header*/
 
 * {
-    margin:0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-header {    
-    width: 100%;
-    height: 60px;
-    background-color: rgb(99, 99, 99);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* или 100% */
+  height: 60px;
+  z-index: 10;
+  background: #fff;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+  
 }
-
+.container__header,
+.container__footer{
+    width: 90%;
+    margin: 0 auto; 
+}
 nav {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    line-height: 50px;
-    color: whitesmoke;
-    align-items: flex-start;
-    padding: 0 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  line-height: 50px;
 }
 
 #navBarLeft a {
-    font-weight: 900;
-    color: whitesmoke;
+  font-weight: 900;
 }
 
 
 #navBarMenu {
-    font-weight: 500;
-    display: flex;
-    width: 380px;
-    color: whitesmoke;
-    justify-content: space-between;
+  font-weight: 500;
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
 }
 
 #navBarMenu a {
-    color: whitesmoke;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
 #navBarBtnContact {
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
-    background: linear-gradient(to right, rgb(80, 20, 243), rgb(175, 77, 167));
-    color: whitesmoke;
-    text-align: center;
-    line-height: 30px;
-    margin-top: 10px;
-    text-decoration: none;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+
+  color: whitesmoke;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.gradient {
+  background: linear-gradient(to right, rgb(80, 20, 243), rgb(175, 77, 167));
 }
 
 #navBarBtnMenu {
-    display: none;
+  display: none;
 }
 
 #navBarDropDown {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 600px) {
 
-    #navBarMenu {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-        border: 2px solid gray;
-    }
+  #navBarMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid gray;
+  }
 
-    #navBarMenu a {
-        width: 100%;
-        height: 40px;
-        background: rgb(223, 223, 223);
-        color: black;
-        text-align: center;
-        line-height: 40px;
-        border-bottom: 1px solid;
-    }
+  #navBarMenu a {
+    width: 100%;
+    height: 40px;
+    background: rgb(223, 223, 223);
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid;
+  }
 
-    #navBarBtnContact {
-        height: 40px;
-        width: 100%;
-        border-radius: 0px;
-        background-color: rgb(223, 223, 223);
-        text-align: center;
-        line-height: 30px;
-        margin: 0;
-    }
+  #navBarBtnContact {
+    height: 40px;
+    width: 100%;
+    border-radius: 0px;
+    background-color: rgb(223, 223, 223);
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+  }
 
-    #navBarBtnMenu {
-        display: inline-block;
-        font-size: 22px;
-        background-color: transparent;
-        border: 0;
-        height: 30;
-        line-height: 30px;
-        margin: 10px;        
-        color: whitesmoke;
-    }
+  #navBarBtnMenu {
+    display: inline-block;
+    font-size: 22px;
+    background-color: transparent;
+    border: 0;
+    height: 30;
+    line-height: 30px;
+    margin: 10px;
+  }
 }
-/*Часть main и footer*/
+
 
 body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #f5f5f5;
+}
+
+.generalContainer {
+  display: flex;
+  width: 1440px;
+  background-color: #f8fafc;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background-color: #f8fafc;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+
 }
 
 #gallery {
-  padding: 40px;
+  margin: 40px 20px;
   text-align: start;
-  background: #fff;
 }
 
 #gallery h2 {
@@ -171,24 +192,12 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1300px) {
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 900px) {
-  .gallery-container {
-    display: grid;
-    grid-template-columns: 1fr; /* одна колонка */
-    justify-items: center; /* все элементы внутри по центру */
-    gap: 20px;
-  }
   .card {
     max-width: 400px;
-    width: 100%; /* чтобы не растягивалась больше контейнера */
+    width: 100%;
+    /* чтобы не растягивалась больше контейнера */
   }
-}
 
 #team {
   padding: 40px 20px;
@@ -216,7 +225,7 @@ body {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 20px;
-  width: 220px;
+  width: 300px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
   flex-shrink: 0;
@@ -248,6 +257,7 @@ body {
   font-size: 14px;
   color: #555;
 }
+
 #about {
   display: flex;
   flex-direction: column;
@@ -258,11 +268,11 @@ body {
   background: linear-gradient(135deg, #dcd1ec, #ece9ee);
   color: black;
 
-  width: 90vw;
+  width: 100%;
   height: 300px;
   border-radius: 20px;
-  margin: 100px auto;
-  padding: 40px;
+  margin: 100px auto 0px;
+  padding: 30px;
 }
 
 .headLine {
@@ -280,10 +290,8 @@ body {
   padding: 12px 24px;
   font-size: 16px;
   background-color: rgb(172, 139, 228);
-  background: linear-gradient(120deg, rgb(111, 21, 208), #e3d5e5);
   color: white;
   border-radius: 8px;
-  border: 1px solid violet;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -302,14 +310,16 @@ body {
   align-items: flex-start;
   text-align: left;
 
-  width: 90vw;
+  width: 100%;
   height: auto;
   border-radius: 20px;
   margin: 50px auto;
   padding: 20px;
   scroll-margin-top: 70px;
 }
+
 footer {
+  width: 100%;
   background: #fff;
   padding: 20px;
   border-top: 1px solid #eee;
@@ -317,10 +327,9 @@ footer {
 
 #footer-container {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 60px;
-  justify-content: start;
-  align-items: start;
+  grid-template-columns: repeat(2, 200px);
+  
+
 }
 
 .footer-column h3 {
@@ -335,6 +344,13 @@ footer {
 }
 
 /* --- Адаптив --- */
+
+@media (max-width: 1300px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .team-container {
     grid-template-columns: repeat(2, 1fr);
@@ -342,62 +358,44 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+
+
+
+@media (max-width: 900px) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* одна колонка */
+    justify-items: center;
+    /* все элементы внутри по центру */
+    gap: 20px;
+  }
+}
+@media (max-width: 650px) {
   .team-container {
     display: grid;
-    grid-template-columns: 1fr; /* одна колонка */
-    justify-items: center; /* все элементы внутри по центру */
+    grid-template-columns: 1fr;
+    /* одна колонка */
+    justify-items: center;
+    /* все элементы внутри по центру */
     gap: 20px;
   }
-  #footer-container {
-    grid-template-columns: 1fr; /* в 1 колонку на мобилках */
-    gap: 20px;
-    text-align: left;
+  .headLine{
+  font-size: 30px;
+
+  }
+  .subheadline{
+    font-size: 16px;
+  }
+  .footer-column{
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 50px;
+  }
+  .footer-column:first-child{
+    margin-bottom: 20px;
+  }
+  #footer-container{
+    display: block;
   }
 }
-
-/* Повтор?
-.headLine {
-  font-style: italic;
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.subheadline {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: rgb(172, 139, 228);
-  background: linear-gradient(120deg, rgb(111, 21, 208), #e3d5e5);
-  color: white;
-  border-radius: 8px;
-  border: 1px solid violet;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #2d0e27, #a1399d);
-  color: #fff;
-}
-
-.about2 {
-  background-color: rgb(244, 237, 237);
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-
-  width: 90vw;
-  height: auto;
-  border-radius: 20px;
-  margin: 50px auto;
-  padding: 20px;
-}
-*/
