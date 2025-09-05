@@ -4,26 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
     <script type="module" src="./js/app.js" defer></script>
     <title>landing our team</title>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <div id="navBarLeft">
+                <a href="./">DevTeam</a>
+            </div>
+            <div id="navBarMenu">
+                <a href="#about2" class="navBarSimple">О нас</a>
+                <a href="#team" class="navBarSimple">Наша команда</a>
+                <a href="#gallery" class="navBarSimple">Галерея</a>
+                <a href="#footer-container" id="navBarBtnContact">Связаться</a>
+            </div>
+            <button id="navBarBtnMenu">☰</button>
+        </nav>
+    </header>
     <main>
 
-        <section class="about">
+        <section id="about">
             <h1 class="headLine">Создаём сайты быстрее и проще</h1>
             <p class="subheadline">Лёгкий, понятный макет: О нас, Команда, Галерея, Контакты.</p>
             <button class="btn">Посмотреть кейсы</button>
         </section>
-        <section class="about2">
+        <section id="about2">
             <h1 class="headLine">О нас</h1>
             <p class="subheadline">Мы - небольшая команда. Делаем аккуратные интерфейсы: чистая типографика, аккуратные
                 отступы, понятные блоки.</p>
-
         </section>
 
         <section id="team">
@@ -62,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section id="gallery">
             <h2>Галерея</h2>
             <div class="gallery-container">
                 <div class="card">
@@ -93,7 +105,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-container">
+        <div id="footer-container">
             <div class="footer-column">
                 <h3>DevTeam</h3>
                 <p>© 2025 DevTeam</p>
