@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +7,7 @@ body {
 
 .gallery {
   padding: 30px;
-  text-align: center;
+  text-align: start;
   background: #fff;
 }
 
@@ -19,13 +20,13 @@ body {
 .gallery-container {
   display: grid;
   gap: 20px;
-  justify-content: center;
-  grid-template-columns: repeat(3, 200px); 
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 900px); 
 }
 
 .card {
-  width: 200px;
-  height: 260px;
+  width: 400px;
+  height: 280px;
   background: #fafafa;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -35,7 +36,7 @@ body {
 }
 
 .card img {
-  width: 180px;
+  width: 400px;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
@@ -54,7 +55,7 @@ body {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .gallery-container {
     grid-template-columns: repeat(2, 200px);
   }
@@ -65,4 +66,140 @@ body {
   .gallery-container {
     grid-template-columns: 200px;
   }
+}
+
+#team {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Грид для карточек */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    /* отступы между карточками */
+    justify-content: center;
+}
+
+/* Карточка */
+.team-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    /* затухание при уменьшении размера экрана */
+    text-align: center;
+    
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    /* не искажает фото */
+
+}
+
+.team-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 992px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* по 2 карточки */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        /* по 1 карточке */
+    }
+}.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+
+    background: linear-gradient(135deg, #dcd1ec, #ece9ee);
+    color: black;
+
+
+    width: 90vw;
+    height: 300px;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.headLine {
+    font-style: italic;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subheadline {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: rgb(172, 139, 228);
+    background: linear-gradient(120deg, rgb(111, 21, 208), #e3d5e5);
+    color: white;
+    border-radius: 8px;
+    border: 1px solid violet;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2d0e27, #a1399d);
+    color: #fff;
+   
+
+}
+
+.about2 {
+    background-color: rgb(244, 237, 237);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+
+    width: 90vw;
+    height: auto;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
 }
